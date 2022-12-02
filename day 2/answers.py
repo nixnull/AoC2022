@@ -28,8 +28,7 @@ def response(x,y):
             return 1
         return x+1
 
-with open('input.txt', 'r') as infile:    
-    print(f'Part A: {sum([matchResult(playType(lst[0]),playType(lst[2])) for lst in infile.read().splitlines()])}')
-    
-with open('input.txt', 'r') as infile:    
-    print(f'Part B: {sum([matchResult(playType(lst[0]),response(playType(lst[0]),lst[2])) for lst in infile.read().splitlines()])}')
+with open('input.txt', 'r') as infile: 
+    thefile = infile.read().splitlines()
+    print(f'Part A: {sum([matchResult(playType(lst[0]),playType(lst[2])) for lst in thefile])}')
+    print(f'Part B: {sum([matchResult(playType(lst[0]),response(playType(lst[0]),lst[2])) for lst in thefile])}')
