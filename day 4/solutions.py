@@ -19,5 +19,5 @@ with open('input.txt', 'r') as infile:
     
     pairs = [[[int(z) for z in y.split("-")] for y in x.split(",")] for x in thefile]
     
-    print(sum(subsets(x) for x in pairs))
-    print(sum(subsets2(x) for x in pairs))
+    print(f'Part A: {sum(subsets(x) for x in pairs)}')
+    print(f'Part B: {sum(subsets2(x) for x in pairs)}')
