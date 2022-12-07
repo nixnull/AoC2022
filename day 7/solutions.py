@@ -44,8 +44,7 @@ with open('input.tx', 'r') as infile:
                         current_dir.add_file(int(thefile[i+lines].split(" ")[0]))
                 else:
                     full_list = True
-    
-    total = 0
+                    
     free_needed = 30000000 - (70000000 - root.dir_size())
     
     total = sum(size for size in [dr.dir_size() for dr in directories] if size < 100000)
